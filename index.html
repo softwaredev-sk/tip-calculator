@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="stylesheet" href="style-copy.css" />
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>SPLITTER</h1>
+    </header>
+    <div class="parent">
+      <div class="container">
+        <div class="form-container">
+          <label class="text text-0">Bill</label><br />
+          <input
+            class="input-bill input-color input-align"
+            type="number"
+            pattern="[0-9]"
+            name="bill"
+            placeholder="0"
+          />
+          <span class="dollar-sign inside-input"></span>
+          <span class="text text-1">Select Tip %</span>
+          <div class="btn-container">
+            <button class="select-tip">5%</button>
+            <button class="select-tip">10%</button>
+            <button class="active select-tip">15%</button>
+            <button class="select-tip">25%</button>
+            <button class="select-tip">50%</button>
+            <input
+              type="number"
+              pattern="[0-9]"
+              class="select-tip custom-tip input-color input-align"
+              placeholder="Custom"
+            />
+          </div>
+          <label class="text text-2">Number of People</label>
+          <input
+            type="number"
+            pattern="[0-9]"
+            class="input-split-count input-color input-align"
+            name="split-count"
+            placeholder="0"
+          />
+          <span class="person-icon inside-input"></span>
+        </div>
+        <div class="output-container">
+          <div class="output-container-box">
+            <div class="tip-box tip-amount">
+              <div class="left tip-left">
+                <span class="per-person tip-static-text">Tip Amount</span>
+                <span class="per-person tip-static-text-person">/ person</span>
+              </div>
+              <div class="right tip-right">
+                <span class="tip-per-person">$0.00</span>
+              </div>
+            </div>
+            <div class="tip-box total-tip">
+              <div class="left total-left">
+                <span class="per-person total-static-text">Total</span>
+                <span class="per-person total-static-text-person"
+                  >/ person</span
+                >
+              </div>
+              <div class="right total-right">
+                <span class="total-per-person">$0.00</span>
+              </div>
+            </div>
+          </div>
+          <button id="reset" type="reset" class="reset-btn">RESET</button>
+        </div>
+      </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://www.shailendra.xyz">Shailendra Kumar</a>.
+      </div>
+    </div>
+
+    <!-- Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount /
+    person Total / person Reset -->
+  </body>
+</html>
