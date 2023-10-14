@@ -4,10 +4,10 @@ const btnReset = document.getElementById('reset'); //button for reset values and
 const billAmount = document.querySelector('.input-bill'); //Bill input field
 const customTipAmount = document.querySelector('.custom-tip'); //custom tip input field
 const splitCount = document.querySelector('.input-split-count'); //number of people input
-const totalPerPerson = document.querySelector('.total-per-person');
-const totalTipPerPerson = document.querySelector('.tip-per-person');
-const error0 = document.querySelector('.error-0');
-const error1 = document.querySelector('.error-1');
+const totalPerPerson = document.querySelector('.total-per-person'); //total bill per person after tip amount
+const totalTipPerPerson = document.querySelector('.tip-per-person'); //total tip per person
+const error0 = document.querySelector('.error-0'); //to handle error state of 0 in bill
+const error1 = document.querySelector('.error-1'); //to handle error state of 0 in numer of people
 
 const tip = document.querySelectorAll('.select-tip');
 
@@ -42,8 +42,10 @@ billAmount.addEventListener('input', () => {
   bill = billAmount.value;
   if (bill == 0) {
     error0.classList.remove('hidden');
-    billAmount.value = 0;
+    billAmount.value = '';
     billAmount.classList.add('error-outline');
+    resetOutput();
+    s;
   } else {
     error0.classList.add('hidden');
     billAmount.classList.remove('error-outline');
@@ -56,14 +58,20 @@ splitCount.addEventListener('input', () => {
   people = splitCount.value;
   if (people == 0) {
     error1.classList.remove('hidden');
-    splitCount.value = 0;
+    splitCount.value = '';
     splitCount.classList.add('error-outline');
+    resetOutput();
   } else {
     error1.classList.add('hidden');
     splitCount.classList.remove('error-outline');
     calcTip(tipValue, bill, people);
   }
 });
+
+const resetOutput = function () {
+  totalTipPerPerson.innerText = '$0.00';
+  totalPerPerson.innerText = '$0.00';
+};
 
 const reset = function () {
   billAmount.value = '';
