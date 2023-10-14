@@ -219,9 +219,14 @@ input:focus {
   background-color: hsl(172, 67%, 45%);
 }
 
+.reset-btn:hover:not([disabled]) {
+  filter: brightness(99%);
+}
+
 .reset-btn:disabled {
   background-color: hsl(183, 79%, 24%);
 }
+
 button.active {
   background-color: hsl(172, 67%, 45%);
   color: hsl(183, 100%, 15%);
@@ -236,6 +241,18 @@ button.active {
   /* margin-top: 15px; */
   width: 100%;
   margin: 0 auto;
+}
+
+.error {
+  color: #aa7160;
+}
+
+.hidden {
+  display: none;
+}
+
+.error-outline {
+  outline: 2px solid #aa7160 !important;
 }
 
 @media screen and (min-width: 768px) {
@@ -315,18 +332,6 @@ button.active {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-  }
-
-  .error {
-    color: #aa7160;
-  }
-
-  .hidden {
-    display: none;
-  }
-
-  .error-outline {
-    outline: 2px solid #aa7160 !important;
   }
 
   .text-1 {
