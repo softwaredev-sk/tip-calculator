@@ -1,11 +1,13 @@
 'use strict';
 
-const btnReset = document.getElementById('reset');
-const billAmount = document.querySelector('.input-bill');
-const customTipAmount = document.querySelector('.custom-tip');
-const splitCount = document.querySelector('.input-split-count');
+const btnReset = document.getElementById('reset'); //button for reset values and error state
+const billAmount = document.querySelector('.input-bill'); //Bill input field
+const customTipAmount = document.querySelector('.custom-tip'); //custom tip input field
+const splitCount = document.querySelector('.input-split-count'); //number of people input
 const totalPerPerson = document.querySelector('.total-per-person');
 const totalTipPerPerson = document.querySelector('.tip-per-person');
+const error0 = document.querySelector('.error-0');
+const error1 = document.querySelector('.error-1');
 
 const tip = document.querySelectorAll('.select-tip');
 
@@ -38,13 +40,29 @@ const enableReset = function () {
 billAmount.addEventListener('input', () => {
   enableReset();
   bill = billAmount.value;
-  calcTip(tipValue, bill, people);
+  if (bill == 0) {
+    error0.classList.remove('hidden');
+    billAmount.value = 0;
+    billAmount.classList.add('error-outline');
+  } else {
+    error0.classList.add('hidden');
+    billAmount.classList.remove('error-outline');
+    calcTip(tipValue, bill, people);
+  }
 });
 
 splitCount.addEventListener('input', () => {
   enableReset();
   people = splitCount.value;
-  calcTip(tipValue, bill, people);
+  if (people == 0) {
+    error1.classList.remove('hidden');
+    splitCount.value = 0;
+    splitCount.classList.add('error-outline');
+  } else {
+    error1.classList.add('hidden');
+    splitCount.classList.remove('error-outline');
+    calcTip(tipValue, bill, people);
+  }
 });
 
 const reset = function () {
@@ -54,6 +72,10 @@ const reset = function () {
   totalPerPerson.innerText = '$0.00';
   customTipAmount.value = '';
   btnReset.setAttribute('disabled', true);
+  error0.classList.add('hidden');
+  billAmount.classList.remove('error-outline');
+  error1.classList.add('hidden');
+  splitCount.classList.remove('error-outline');
   checkActive();
   tip[2].classList.add('active');
   bill = 0;

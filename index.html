@@ -40,7 +40,11 @@
     <div class="parent">
       <div class="container">
         <div class="form-container">
-          <label class="text text-0">Bill</label><br />
+          <div class="label-container">
+            <label class="text text-0">Bill</label>
+            <span class="error error-0 hidden">Can't be zero</span>
+          </div>
+          <br />
           <input
             class="input-bill input-color input-align"
             type="number"
@@ -63,7 +67,10 @@
               placeholder="Custom"
             />
           </div>
-          <label class="text text-2">Number of People</label>
+          <div class="label-container">
+            <label class="text text-2">Number of People</label>
+            <span class="error error-1 hidden">Can't be zero</span>
+          </div>
           <input
             type="number"
             pattern="[0-9]"

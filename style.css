@@ -239,10 +239,10 @@ button.active {
 }
 
 @media screen and (min-width: 768px) {
-  header {
+  /* header {
     position: relative;
     top: -20px;
-  }
+  } */
 
   body {
     padding: 100px 0;
@@ -262,6 +262,7 @@ button.active {
     width: auto;
     max-width: 70vw;
     border-radius: 20px;
+    /* max-height: 60vh; */
   }
 
   .form-container {
@@ -307,6 +308,25 @@ button.active {
   .text-1,
   .text-2 {
     margin-bottom: 10px;
+  }
+
+  .label-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .error {
+    color: #aa7160;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .error-outline {
+    outline: 2px solid #aa7160 !important;
   }
 
   .text-1 {
