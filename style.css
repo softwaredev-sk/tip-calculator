@@ -165,13 +165,13 @@ input:focus {
 }
 
 .dollar-sign {
-  content: url('../images/icon-dollar.svg');
+  /* content: url('../images/icon-dollar.svg'); */
   transform: scale(1.2);
   z-index: 10;
 }
 
 .person-icon {
-  content: url('../images/icon-person.svg');
+  /* content: url('../images/icon-person.svg'); */
   transform: scale(1.2);
   z-index: 10;
 }
