@@ -38,15 +38,15 @@ const enableReset = function () {
 };
 
 billAmount.addEventListener('input', () => {
-  enableReset();
   bill = billAmount.value;
-  if (bill == 0) {
+  if (bill <= 0) {
     error0.classList.remove('hidden');
     billAmount.value = '';
     billAmount.classList.add('error-outline');
     resetOutput();
     s;
   } else {
+    enableReset();
     error0.classList.add('hidden');
     billAmount.classList.remove('error-outline');
     calcTip(tipValue, bill, people);
@@ -54,14 +54,14 @@ billAmount.addEventListener('input', () => {
 });
 
 splitCount.addEventListener('input', () => {
-  enableReset();
   people = splitCount.value;
-  if (people == 0) {
+  if (people <= 0) {
     error1.classList.remove('hidden');
     splitCount.value = '';
     splitCount.classList.add('error-outline');
     resetOutput();
   } else {
+    enableReset();
     error1.classList.add('hidden');
     splitCount.classList.remove('error-outline');
     calcTip(tipValue, bill, people);

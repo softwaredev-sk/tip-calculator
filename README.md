@@ -62,6 +62,7 @@ Users should be able to:
 
 - I made to page load with default tip percentage, i.e. 15%
 - Used eyedropper for selecting orange color for error "Can't be zero" from sample image, so the color is not exactly same due to image showing pixelated.
+- Due to hover color and reset button color being same, I used filter option to manipulate brightness, to make hover effect different.
 
 ### Useful resources
 
