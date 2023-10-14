@@ -243,6 +243,13 @@ button.active {
   margin: 0 auto;
 }
 
+.label-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
 .error {
   color: #aa7160;
 }
@@ -325,13 +332,6 @@ button.active {
   .text-1,
   .text-2 {
     margin-bottom: 10px;
-  }
-
-  .label-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
   }
 
   .text-1 {
