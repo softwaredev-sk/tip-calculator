@@ -173,7 +173,6 @@ input:focus {
 .person-icon {
   /* content: url('../images/icon-person.svg'); */
   transform: scale(1.2);
-  z-index: 10;
 }
 
 .per-person {
