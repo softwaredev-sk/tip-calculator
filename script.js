@@ -9,6 +9,15 @@ const totalTipPerPerson = document.querySelector('.tip-per-person'); //total tip
 const error0 = document.querySelector('.error-0'); //to handle error state of 0 in bill
 const error1 = document.querySelector('.error-1'); //to handle error state of 0 in numer of people
 
+// document
+//   .querySelector('meta[name=viewport]')
+//   .setAttribute(
+//     'content',
+//     'width=device-width, initial-scale=' +
+//       1 / window.devicePixelRatio +
+//       ', maximum-scale=1.0, user-scalable=0'
+//   );
+
 const tip = document.querySelectorAll('.select-tip');
 
 let bill = 0;
