@@ -25,9 +25,15 @@ let people = 0;
 let tipValue = 15;
 let active;
 
-// customTipAmount.addEventListener('change', () => {
-//   customTipAmount.innerText;
-// });
+customTipAmount.addEventListener('input', () => {
+  if (customTipAmount.value <= 0) {
+    customTipAmount.value = '';
+    resetOutput();
+  } else {
+    customTipAmount.setAttribute('placeholder', 0);
+  }
+  enableReset();
+});
 
 const calcTip = function (tip, billAmount, splitCount) {
   const totalTip = billAmount * (tip / 100);
@@ -53,7 +59,6 @@ billAmount.addEventListener('input', () => {
     billAmount.value = '';
     billAmount.classList.add('error-outline');
     resetOutput();
-    s;
   } else {
     enableReset();
     error0.classList.add('hidden');
@@ -88,6 +93,7 @@ const reset = function () {
   totalTipPerPerson.innerText = '$0.00';
   totalPerPerson.innerText = '$0.00';
   customTipAmount.value = '';
+  customTipAmount.setAttribute('placeholder', 'Custom');
   btnReset.setAttribute('disabled', true);
   error0.classList.add('hidden');
   billAmount.classList.remove('error-outline');
