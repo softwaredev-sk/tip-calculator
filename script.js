@@ -26,11 +26,14 @@ let tipValue = 15;
 let active;
 
 customTipAmount.addEventListener('input', () => {
-  if (customTipAmount.value <= 0) {
+  if (customTipAmount.value < 0) {
     customTipAmount.value = '';
     resetOutput();
   } else {
     customTipAmount.setAttribute('placeholder', 0);
+  }
+  if (customTipAmount.value >= 0) {
+    customTipAmount.value = parseInt(customTipAmount.value);
   }
   enableReset();
 });
