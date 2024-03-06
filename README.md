@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [See Github Repository](https://github.com/softwaredev-sk/tip-calculator)
-- Live Site URL: [See Live Here](http://tip-calculator.vercel.app/)
+- Live Site URL: [See Live Here](http://tip-calculator-sk.vercel.app/)
 
 ## My process
 
