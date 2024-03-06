@@ -72,7 +72,7 @@ Users should be able to:
 ## Author
 
 - Website - [Shailendra Kumar](https://www.shailendra.xyz)
-- Frontend Mentor - [@develover-sk](https://www.frontendmentor.io/profile/softwaredev-sk)
+- Frontend Mentor - [@softwaredev-sk](https://www.frontendmentor.io/profile/softwaredev-sk)
 - Twitter - [@shailendrakrsk\_](https://www.twitter.com/shailendrakrsk_)
 
 ## Acknowledgments
