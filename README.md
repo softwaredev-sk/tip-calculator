@@ -20,7 +20,7 @@
 
 Users should be able to:
 
-- View the optimal layout for the app depending on their device's screen size
+- View the optimal layout for the app depending on the device's screen size
 - See hover states for all interactive elements on the page
 - Calculate the correct tip and total cost of the bill per person
 
@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [See Github Repository](https://github.com/develover-sk/tip-calculator)
-- Live Site URL: [See Live Here](https://your-live-site-url.com)
+- Solution URL: [See Github Repository](https://github.com/softwaredev-sk/tip-calculator)
+- Live Site URL: [See Live Here](http://tip-calculator.vercel.app/)
 
 ## My process
 
